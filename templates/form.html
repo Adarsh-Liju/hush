@@ -1,56 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>WebSSH (HTMX + Tailwind)</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Tailwind CDN -->
-        <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    </head>
-    <body class="bg-black text-green-400 font-mono h-screen flex flex-col">
-        <div
-            class="max-w-md mx-auto bg-gray-900 p-6 mt-10 rounded shadow text-green-200"
-        >
-            <h2 class="text-2xl font-bold mb-4 text-white">
-                Connect to SSH Server
-            </h2>
-            <form action="/connect" method="post" class="space-y-4">
-                <input
-                    type="text"
-                    name="host"
-                    placeholder="Host/IP"
-                    class="w-full p-2 bg-black border border-green-500 rounded"
-                    required
-                />
-                <input
-                    type="text"
-                    name="port"
-                    placeholder="Port (default: 22)"
-                    class="w-full p-2 bg-black border border-green-500 rounded"
-                />
-                <input
-                    type="text"
-                    name="user"
-                    placeholder="Username"
-                    class="w-full p-2 bg-black border border-green-500 rounded"
-                    required
-                />
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    class="w-full p-2 bg-black border border-green-500 rounded"
-                    required
-                />
-
-                <button
-                    type="submit"
-                    class="w-full bg-green-600 hover:bg-green-500 p-2 rounded text-white font-bold"
-                >
-                    Connect
-                </button>
-            </form>
-        </div>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>SSH Connect</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+</head>
+<body class="bg-black text-green-400 font-mono h-screen flex items-center justify-center">
+  <div class="w-full max-w-md bg-gray-900 p-6 rounded shadow text-green-200">
+    <h2 class="text-2xl font-bold mb-4 text-white">Connect to SSH</h2>
+    <form action="/connect" method="post" class="space-y-4">
+      <input
+        type="text"
+        name="host"
+        placeholder="Host/IP"
+        class="w-full p-2 bg-black border border-green-500 rounded"
+        required
+      />
+      <input
+        type="text"
+        name="port"
+        placeholder="Port (default: 22)"
+        class="w-full p-2 bg-black border border-green-500 rounded"
+      />
+      <input
+        type="text"
+        name="user"
+        placeholder="Username"
+        class="w-full p-2 bg-black border border-green-500 rounded"
+        required
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        class="w-full p-2 bg-black border border-green-500 rounded"
+        required
+      />
+      <button
+        type="submit"
+        class="w-full bg-green-600 hover:bg-green-500 p-2 rounded text-white font-bold"
+      >
+        Connect
+      </button>
+    </form>
+  </div>
+</body>
 </html>
+
